@@ -1,0 +1,12 @@
+[Unit]
+Description=Platform Operator
+After=network.target
+
+[Service]
+ExecStart=/opt/operator/venv/bin/python /opt/operator/platform_operator.py
+WorkingDirectory=/opt/operator
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
